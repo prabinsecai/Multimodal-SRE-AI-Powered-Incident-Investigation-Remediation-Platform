@@ -9,8 +9,14 @@ jobs:
         with: {python-version: '3.11'}
       - run: pip install -r backend/requirements.txt
       - run: pytest backend/tests -q
+        env:
+          DATABASE_URL: postgresql+asyncpg://sre:ci@localhost:5432/multimodal_sre
+          REDIS_URL: redis://localhost:6379/0
+          QDRANT_URL: http://localhost:6333
+          PROMETHEUS_URL: http://localhost:9090
+          JWT_SECRET: ci-only-test-secret-key-at-least-32-characters
       - run: ruff check backend scripts
       - uses: actions/setup-node@v4
         with: {node-version: '20'}
-      - run: cd frontend && npm install && npm run build
+      - run: cd frontend && npm ci && npm run build
       - run: docker compose config
