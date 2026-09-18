@@ -1,0 +1,6 @@
+backend:
+  image: multimodal-sre-backend:latest
+  replicas: 2
+frontend:
+  image: multimodal-sre-frontend:latest
+  replicas: 2

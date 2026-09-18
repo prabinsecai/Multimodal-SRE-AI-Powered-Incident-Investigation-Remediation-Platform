@@ -1,0 +1,1 @@
+{"incident_id":"eval-04","scenario":"database_timeout","expected_root_cause":"Database connection pool exhaustion","relevant_documents":["postgres-connection-pool.md"],"expected_service":"payment-api","severity":"SEV-2"}

@@ -1,0 +1,42 @@
+# Local environment files and credentials (retain the safe example template)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+
+# Dependencies and language caches
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Frontend build output and local tooling
+.next/
+out/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Runtime data, logs, editor, and OS files
+*.log
+logs/
+tmp/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
